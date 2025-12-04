@@ -2,20 +2,7 @@ CREATE DATABASE campusx;
 
 use campusx;
 
-CREATE TABLE users (
-	user_id INTEGER PRIMARY KEY AUTO_INCREMENT, 
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE, 
-    password VARCHAR(255) NOT NULL
-);
-
-INSERT INTO users (user_id, name, email, password)
-VALUES
-(null, "Flute", "flute@gmail.com", "flute");
-
-
 -- smartphones table data 
-
 SELECT * FROM smartphones 
 
 

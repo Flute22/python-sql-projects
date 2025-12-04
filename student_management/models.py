@@ -56,7 +56,7 @@ def update_student(student_id, name, email, phone, course):
     )
     
     conn.commit()
-    cur.close()
+    conn.close()
     
 
 def delete_student(student_id):

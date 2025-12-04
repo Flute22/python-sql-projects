@@ -1,4 +1,5 @@
-import pyodbc 
+import pyodbc  # type: ignore
+
 
 def get_connection(): 
     conn = pyodbc.connect(

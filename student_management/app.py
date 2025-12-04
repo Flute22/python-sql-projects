@@ -2,7 +2,7 @@ from db import init_db
 from models import add_student, view_students, search_student, update_student, delete_student
 
 def main(): 
-    init_db
+    init_db()
     
     while True: 
         print(
@@ -31,8 +31,13 @@ def main():
             
             case "2": 
                 student = view_students()
+                print("------------------------------------------------------")
+                print("|ID    | Name   | Email          | Phone       | Course")
+                print("------------------------------------------------------")
+                
                 for r in student: 
-                    print(r)
+                    print(f"\n{r[0]}    | {r[1]}   | {r[2]}          | {r[3]}       | {r[4]}")
+                    print(f"------------------------------------------------------")
             
             case "3": 
                 kw = input("Search name/email: ")
@@ -60,3 +65,4 @@ def main():
 
 if __name__ == "__main__":  
     main()
+
